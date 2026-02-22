@@ -4,20 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanggar Ananda — ruang berkarya, tumbuh bersama</title>
+    <!-- Fonts: Inter & Georgia untuk sentuhan klasik minimalis -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (Free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #fcfbf9;
             color: #1e1b18;
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             font-weight: 300;
+            -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ===== TYPOGRAPHY INSPIRATIF ===== */
+        .serif {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: normal;
+            letter-spacing: -0.01em;
+        }
+
+        .quote-text {
+            font-size: 28px;
+            line-height: 1.4;
+            font-style: italic;
+            color: #2c3e50;
+        }
+
+        .author-quote {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #7f8c8d;
+            margin-top: 16px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            color: #1a2c3a;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .section-sub {
+            font-size: 18px;
+            color: #4a5568;
+            max-width: 600px;
+            margin-bottom: 64px;
+            font-weight: 300;
+        }
+
+        /* ===== HEADER MINIMALIS ===== */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -25,13 +79,19 @@
             padding: 40px 0 24px;
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo a { text-decoration: none; color: #1a2c3a; }
+
+        .logo a {
+            text-decoration: none;
+            color: #1a2c3a;
+        }
+
         .logo-main {
             font-size: 26px;
             font-weight: 400;
             letter-spacing: 6px;
             text-transform: uppercase;
         }
+
         .logo-sub {
             font-size: 13px;
             letter-spacing: 4px;
@@ -39,7 +99,12 @@
             margin-top: 6px;
             font-weight: 300;
         }
-        .nav-links { display: flex; gap: 48px; }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+        }
+
         .nav-links a {
             text-decoration: none;
             color: #1e1b18;
@@ -50,13 +115,20 @@
             border-bottom: 1px solid transparent;
             padding-bottom: 4px;
         }
-        .nav-links a:hover { border-bottom-color: #1a2c3a; color: #000; }
+
+        .nav-links a:hover {
+            border-bottom-color: #1a2c3a;
+            color: #000;
+        }
+
+        /* ===== HERO SECTION ===== */
         .hero {
             padding: 120px 0 100px;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
         }
+
         .hero-kicker {
             font-size: 14px;
             letter-spacing: 6px;
@@ -64,6 +136,7 @@
             color: #7f8c8d;
             margin-bottom: 24px;
         }
+
         .hero h1 {
             font-size: 64px;
             font-weight: 300;
@@ -71,11 +144,13 @@
             margin-bottom: 32px;
             color: #1a2c3a;
         }
+
         .hero h1 em {
             font-style: italic;
             font-family: Georgia, serif;
             color: #2c5f2d;
         }
+
         .hero-desc {
             font-size: 20px;
             color: #3d4a5a;
@@ -83,6 +158,7 @@
             margin: 0 auto 48px;
             font-weight: 300;
         }
+
         .hero-quote {
             font-size: 24px;
             color: #2c3e50;
@@ -92,35 +168,47 @@
             margin-top: 40px;
             font-style: italic;
         }
+
+        /* ===== INSPIRATIONAL QUOTE BANNER ===== */
         .inspire-strip {
             background: #f0ede8;
             padding: 80px 0;
             margin: 40px 0;
+            border-radius: 2px;
         }
+
         .inspire-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 48px;
         }
-        .inspire-item { text-align: center; }
+
+        .inspire-item {
+            text-align: center;
+        }
+
         .inspire-icon {
             font-size: 38px;
             color: #2c5f2d;
             margin-bottom: 24px;
             opacity: 0.8;
         }
+
         .inspire-item p {
             font-size: 18px;
             font-style: italic;
             color: #2e3f4e;
             line-height: 1.6;
         }
+
         .inspire-author {
             margin-top: 16px;
             font-size: 13px;
             letter-spacing: 2px;
             color: #7b8a92;
         }
+
+        /* ===== TENTANG SANGAR ===== */
         .about {
             padding: 80px 0;
             display: flex;
@@ -128,12 +216,17 @@
             gap: 60px;
             align-items: center;
         }
-        .about-text { flex: 1 1 350px; }
+
+        .about-text {
+            flex: 1 1 350px;
+        }
+
         .about-text p {
             font-size: 18px;
             margin-bottom: 24px;
             color: #33414e;
         }
+
         .about-highlight {
             background: #ffffff;
             padding: 40px;
@@ -141,63 +234,62 @@
             box-shadow: 0 20px 40px -30px rgba(0,0,0,0.2);
             flex: 1 1 300px;
         }
+
         .about-highlight .quote {
             font-size: 22px;
             font-style: italic;
             color: #1e3b3b;
         }
-        .programs { padding: 60px 0; }
-        .section-title {
-            font-size: 44px;
-            font-weight: 300;
-            letter-spacing: -0.5px;
-            color: #1a2c3a;
-            margin-bottom: 24px;
-            line-height: 1.1;
+
+        /* ===== PROGRAM / KELAS ===== */
+        .programs {
+            padding: 60px 0;
         }
-        .section-sub {
-            font-size: 18px;
-            color: #4a5568;
-            max-width: 600px;
-            margin-bottom: 64px;
-            font-weight: 300;
-        }
+
         .program-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 32px;
             margin-top: 40px;
         }
+
         .program-card {
             background: transparent;
             padding: 24px 0 24px 0;
             border-bottom: 1px solid #dbd7d0;
         }
+
         .program-card h3 {
             font-size: 28px;
             font-weight: 300;
             margin-bottom: 12px;
             color: #1e3a3f;
         }
+
         .program-card p {
             color: #4f5e68;
             font-size: 16px;
         }
+
         .program-icon {
             font-size: 32px;
             color: #2c5f2d;
             margin-bottom: 16px;
         }
+
+        /* ===== TESTIMONIALS ===== */
         .testimonials {
             background: #f5f3f0;
             padding: 100px 0;
             margin: 40px 0;
         }
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 48px;
         }
+
         .testi-card {
             padding: 32px 32px 32px 48px;
             background: white;
@@ -205,6 +297,7 @@
             box-shadow: 0 4px 24px rgba(0,0,0,0.02);
             position: relative;
         }
+
         .testi-card i {
             position: absolute;
             left: 16px;
@@ -212,22 +305,27 @@
             font-size: 32px;
             color: #cad1d8;
         }
+
         .testi-text {
             font-size: 18px;
             font-style: italic;
             margin-bottom: 24px;
             color: #2e404f;
         }
+
         .testi-author {
             font-weight: 400;
             letter-spacing: 1px;
             color: #5f6a73;
         }
+
+        /* ===== INSPIRASI HARIAN ===== */
         .daily-inspiration {
             padding: 60px 0 80px;
             text-align: center;
             border-top: 1px solid #e3dfd9;
         }
+
         .rotating-quote {
             font-size: 32px;
             max-width: 700px;
@@ -235,11 +333,14 @@
             font-style: italic;
             color: #1d2f3a;
         }
+
         .quote-source {
             font-size: 16px;
             color: #81929c;
             letter-spacing: 2px;
         }
+
+        /* ===== FOOTER ===== */
         .footer {
             border-top: 1px solid #e9e2da;
             padding: 48px 0 32px;
@@ -250,6 +351,7 @@
             color: #5b6c78;
             font-size: 14px;
         }
+
         .social a {
             color: #3c4f5c;
             margin-left: 32px;
@@ -257,24 +359,47 @@
             transition: 0.2s;
             text-decoration: none;
         }
-        .social a:hover { color: #1b3b3b; }
+
+        .social a:hover {
+            color: #1b3b3b;
+        }
+
         .developer-credit {
             font-size: 12px;
             opacity: 0.6;
             letter-spacing: 1px;
         }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 700px) {
-            .hero h1 { font-size: 44px; }
-            .navbar { flex-direction: column; gap: 24px; }
-            .nav-links { gap: 24px; flex-wrap: wrap; justify-content: center; }
-            .inspire-grid { grid-template-columns: 1fr; gap: 40px; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 36px; }
+            .hero h1 {
+                font-size: 44px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .nav-links {
+                gap: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .inspire-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- HEADER minimalis tanpa noise -->
         <nav class="navbar">
             <div class="logo">
                 <a href="/">
@@ -291,6 +416,7 @@
             </div>
         </nav>
 
+        <!-- HERO section dengan quotes inspiratif -->
         <div class="hero">
             <div class="hero-kicker">ruang tumbuh · ruang rasa</div>
             <h1>tempat anak <em>bertumbuh</em><br>dalam keindahan & seni</h1>
@@ -302,6 +428,7 @@
         </div>
     </div>
 
+    <!-- STRIP INSPIRASI 3 KOLOM -->
     <div class="inspire-strip">
         <div class="container">
             <div class="inspire-grid">
@@ -325,6 +452,7 @@
     </div>
 
     <div class="container">
+        <!-- TENTANG SANGAR -->
         <div class="about">
             <div class="about-text">
                 <div class="section-title">ruang merawat mimpi</div>
@@ -337,6 +465,7 @@
             </div>
         </div>
 
+        <!-- PROGRAM -->
         <div class="programs">
             <div class="section-title" style="font-size:38px;">apa yang bisa dipelajari</div>
             <div class="section-sub">setiap program dirancang untuk menumbuhkan rasa percaya, empati, dan imajinasi.</div>
@@ -365,6 +494,7 @@
         </div>
     </div>
 
+    <!-- TESTIMONIALS -->
     <div class="testimonials">
         <div class="container">
             <div class="section-title" style="color:#1e3b3b;">cerita yang lahir dari sini</div>
@@ -394,6 +524,7 @@
         </div>
     </div>
 
+    <!-- KUTIPAN HARIAN -->
     <div class="daily-inspiration container">
         <div class="rotating-quote">
             “Mulailah dengan melakukan apa yang perlu; kemudian apa yang mungkin; dan tiba-tiba kamu mengerjakan yang mustahil.”
@@ -402,6 +533,7 @@
         <p style="margin-top:48px; font-size:15px; color:#7f998e;"><i class="far fa-heart"></i> setiap hari kutipan baru, karena inspirasi tak pernah berhenti</p>
     </div>
 
+    <!-- FOOTER -->
     <div class="container">
         <div class="footer">
             <div>
@@ -420,5 +552,4 @@
         <div style="height:40px;"></div>
     </div>
 </body>
-  </html>
-
+</html>
